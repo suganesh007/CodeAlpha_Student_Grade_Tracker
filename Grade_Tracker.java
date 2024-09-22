@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -88,7 +87,12 @@ public class Grade_Tracker
                 {
                     System.out.print("Enter the Total number of students = ");
                     Total_Student = in.nextInt();
-                    flag = true;
+                    if (Total_Student <=0)
+                    {
+                        System.err.println("Negative values and 0's are not able to assign");
+                    }
+                    else
+                     flag = true;
                 }
 
                 catch (InputMismatchException e)
@@ -139,7 +143,7 @@ public class Grade_Tracker
             {
                 try 
                 {
-                    System.out.print("\nWant to continue (press any number for continue other than 0 , 0 for End) = ");
+                    System.out.print("\n\nWant to continue (press any number for continue other than 0 , 0 for End) = ");
                     Again = in.nextInt();
                     flags = false;
                 }
